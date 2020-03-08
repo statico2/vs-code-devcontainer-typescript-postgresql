@@ -1,18 +1,21 @@
 import * as express from "express"
-import * as knex from "knex"
+
+import { db } from "./db"
 
 const PORT = 3000
 const HOST = "0.0.0.0"
 
-const pg = knex({
-  client: "pg",
-  connection: "postgresql://user:pass@db/data"
-})
-
 const app = express()
 app.get("/", async (req: any, res: any) => {
-  const data = await pg.select("*").from("pg_config")
-  res.send(`Hello ${JSON.stringify(data, null, "  ")}`)
+  const data = await db()
+    .select("*")
+    .from("things")
+  res.send(
+    `<pre>
+      Hello, world! Here are some things from the database:
+      ${JSON.stringify(data, null, "  ")}
+    </pre>`
+  )
 })
 
 app.listen(PORT, HOST)

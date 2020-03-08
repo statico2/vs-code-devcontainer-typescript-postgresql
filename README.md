@@ -1,3 +1,17 @@
+TypeScript + VS Code + Docker + Postgres + Knex
+
+1. Install Docker
+1. Install VS Code Containers extension
+1. Install Git for Windows if on Windows
+1. Open in VS Code, reload workspace in container
+1. In the shell, `yarn dev`, then go to http://localhost:3000
+
+Things like `yarn exec knex migrate:make foo` work, too.
+
+---
+
+Original readme...
+
 # Try Out Development Containers: Node.js
 
 This is a sample project that lets you try out the **[VS Code Remote - Containers](https://aka.ms/vscode-remote/containers)** extension in a few easy steps.
@@ -18,9 +32,9 @@ Follow these steps to open this sample in a container:
 
    Or open the repository in an isolated Docker volume:
 
-    - Press <kbd>F1</kbd> and select the **Remote-Containers: Try a Sample...** command.
-    - Choose the "Node" sample, wait for the container to start and try things out!
-        > **Note:** Under the hood, this will use **Remote-Containers: Open Repository in Container...** command to clone the source code in a Docker volume instead of the local filesystem.
+   - Press <kbd>F1</kbd> and select the **Remote-Containers: Try a Sample...** command.
+   - Choose the "Node" sample, wait for the container to start and try things out!
+     > **Note:** Under the hood, this will use **Remote-Containers: Open Repository in Container...** command to clone the source code in a Docker volume instead of the local filesystem.
 
 ## Things to try
 
@@ -51,7 +65,7 @@ Some things to try:
 
 ## Contributing
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
+This project welcomes contributions and suggestions. Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
 the rights to use your contribution. For details, visit https://cla.microsoft.com.
 

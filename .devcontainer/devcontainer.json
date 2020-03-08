@@ -3,11 +3,16 @@
   "dockerComposeFile": "docker-compose.yml",
   "service": "web",
   "workspaceFolder": "/workspace",
-  "appPort": [3000],
+  "appPort": [
+    3000
+  ],
   "remoteUser": "node",
   "settings": {
-    "terminal.integrated.shell.linux": "/usr/bin/zsh"
+    "terminal.integrated.shell.linux": "/bin/bash"
   },
-  "postCreateCommand": "yarn install",
-  "extensions": ["esbenp.prettier-vscode", "gamunu.vscode-yarn"]
+  "postCreateCommand": "npm i -g nodemon && yarn install && yarn exec knex migrate:latest && yarn exec knex seed:run",
+  "extensions": [
+    "esbenp.prettier-vscode",
+    "gamunu.vscode-yarn"
+  ]
 }
