@@ -3,15 +3,11 @@
   "dockerComposeFile": "docker-compose.yml",
   "service": "web",
   "workspaceFolder": "/workspace",
-  "appPort": [
-    3000
-  ],
+  "appPort": [3000],
   "remoteUser": "node",
   "settings": {
-    "terminal.integrated.shell.linux": "/bin/bash"
+    "terminal.integrated.shell.linux": "/usr/bin/zsh"
   },
   "postCreateCommand": "yarn install",
-  "extensions": [
-    "esbenp.prettier-vscode"
-  ]
+  "extensions": ["esbenp.prettier-vscode", "gamunu.vscode-yarn"]
 }

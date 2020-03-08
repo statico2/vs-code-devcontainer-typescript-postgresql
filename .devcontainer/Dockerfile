@@ -39,3 +39,5 @@ ENV DEBIAN_FRONTEND=dialog
 
 # Uncomment to default to non-root user
 # USER $USER_UID
+
+RUN npm i -g ts-node nodemon
